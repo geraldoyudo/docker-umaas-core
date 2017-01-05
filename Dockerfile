@@ -7,7 +7,7 @@ ENV fileName umaas-core.jar
 COPY conf/application.yml /conf/application.yml
 COPY entry-point.sh /entry-point.sh
 
-RUN wget ${projectUrl} -0 /workdir/fileName
+RUN wget ${projectUrl} -O /workdir/fileName
 	
 ENTRYPOINT ["/entry-point.sh"]
 
